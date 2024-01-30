@@ -1,16 +1,27 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, CommonModule, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   box = 'Rikky';
-  imagePath = '../assets/Huskiesatrest.jpg';
   name = "";
+
+ Puppy = {
+ "Image":"../assets/Huskiesatrest.jpg",
+  "Breed":"Husky",
+ "Color":"Brown",
+ "Age":"5 Months",
+ "Price":3000,
+  "Offer":200
+
+};
+
 }

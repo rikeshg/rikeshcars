@@ -1,0 +1,17 @@
+<div class="Puppy">
+    <div class="row">
+      <div class="col-3" *ngFor="let Puppy of Puppies">
+        <div class="card">
+            <img [src]="Puppy.Image" class="img-fluid rounded-start productImage" alt="dog">
+            <div class="card-body">
+              <h5 class="card-Breed">{{Puppy.Breed}}</h5>
+              <p> Color:{{Puppy.Color}} </p>
+              <p> Age:{{Puppy.Age}} </p>
+              <p> Price:{{Puppy.Price-Puppy.Offer}} </p>
+              <div *ngIf="Puppy.FAssured">FAssured</div>
+              <button class="btn btn-primary">Check Availability</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
